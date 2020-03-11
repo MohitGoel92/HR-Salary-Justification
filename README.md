@@ -35,7 +35,7 @@ Support vector machines (SVM) support linear and non-linear regression that we r
 
 The vectors closest to the test points are referred to as the support vectors. We can evaluate our function anywhere so any vectors could be closest to our test evaluation location. Please see the diagram below for clarification.
 
-<img src = 'Screen3.png' width='700'>
+<img src = 'Screen6.png' width='700'>
 
 **Note:**
 
@@ -59,6 +59,6 @@ In this analysis, we are choosing the Gaussian RBF Kernel (Radial Basis Function
 
 The diagram below shows the SVR being applied to the dataset, along with a higher resolution plot (step size 0.01) for a smoother curve. 
 
-<img src = 'Screen6.png' width='700'>
+<img src = 'Screen5.png' width='700'>
 
 The predicted salary for someone at level 6.5 has been predicted to be just over £170,000, being in support of the new hire's claim. We therefore state that the new hire was telling us the truth.
