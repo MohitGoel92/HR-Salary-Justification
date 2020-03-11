@@ -53,8 +53,6 @@ SVR has a different regressional goal compared to linear regression. In linear r
 - Not as well known 
 - Can be difficult to understand.
 
-We will be solving a simple business task using Support Vector Regression.
-
 In this analysis, we are choosing the Gaussian RBF Kernel (Radial Basis Function) and regularisation as due to the training sets with noise, the reguliser will prevent wild fluctuations between data points by smoothing out the prior. Any points away from the SVR curve will be treated as an outlier (as illustrated by the salary of the CEO in our dataset).
 
 The diagram below shows the SVR being applied to the dataset, along with a higher resolution plot (step size 0.01) for a smoother curve. 
@@ -62,3 +60,41 @@ The diagram below shows the SVR being applied to the dataset, along with a highe
 <img src = 'Screen5.png' width='700'>
 
 The predicted salary for someone at level 6.5 has been predicted to be just over £170,000, being in support of the new hire's claim. We therefore state that the new hire was telling us the truth.
+
+## Decision Tree Regression
+
+**CART:** Classification and Regression Trees
+
+The diagram below illustrates an example of how the Decision Tree Regression works. The small segments are called "terminal leaves". 
+
+<img src = 'Screen7.png' width='700'>
+
+We take the average of each terminal leaf and the value obtained will be the value predicted for any point that lands in that terminal leaf.
+
+<img src = 'Screen8.png' width='700'>
+
+The tree diagram below shows how each new point will be assigned a new predicted value. 
+
+<img src = 'Screen9.png' width='700'>
+
+**Pros of Decision Tree Regression:**
+
+- Interpretability
+- Feature scaling not being required
+- Works on both linear/non-linear problems
+
+**Cons of Decision Tree Regression:**
+
+- Poor results on too small datasets
+- Overfitting can easily occur
+
+The diagram below shows the Decision Tree Regressor model being applied to the dataset.
+
+<img src = 'Screen11.png' width='700'>
+
+As the Decision Tree Regressor is not a continuous regression model, we must visualise the model using a higher resolution (step = 0.01).The diagram below shows the Decision Tree Regressor being applied to the dataset, along with a higher resolution plot (step size 0.01).
+
+<img src = 'Screen12.png' width='700'>
+
+The expected salary for someone at level 6.5 has been predicted to be £150,000. This is £10,000 under the new hire's claimed previous salary. Therefore, if we base our decision solely on the Decision Tree Regression model, we do not accept the new hire's claim and state that the new hire was bluffing. However, as the dataset is small and Decision Tree Regression yield poor results on small datasets, the validity of the result/decision is questionable.
+
