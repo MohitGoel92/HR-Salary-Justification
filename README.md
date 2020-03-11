@@ -19,7 +19,7 @@ Polynomial regression is also referred to as Polynomial Linear Regression as "Li
 
 - Need to choose the right polynomial degree for a good bias/variance trade off.
 
- The dataset received from the new hire's company has been plotted on a scatter graph below.
+ The dataset received from the new hire's company has been plotted on the scatter graph below. 
 
 <img src = 'Screen1.png' width='700'>
 
