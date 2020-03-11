@@ -35,7 +35,7 @@ Support vector machines (SVM) support linear and non-linear regression that we r
 
 The vectors closest to the test points are referred to as the support vectors. We can evaluate our function anywhere so any vectors could be closest to our test evaluation location. Please see the diagram below for clarification.
 
-<img src = 'Screen4.png' width='700'>
+<img src = 'Screen3.png' width='700'>
 
 **Note:**
 
@@ -55,16 +55,10 @@ SVR has a different regressional goal compared to linear regression. In linear r
 
 We will be solving a simple business task using Support Vector Regression.
 
-**Task:**
-
-We are working within the HR department in a company and are about to hire a new employee. We are about to negotiate the salary. The new hire has 20+ years of experience and says he/she used to earn a salary of £160,000, therefore being the desired minimum salary for their new role. The HR team has reached out to the new hire's previous employer to verify, but they only sent back a table of salaries that the company uses to band their employees. They also stated that he/she was a regional manager for two years and it takes 4 years to go from regional manager to partner. Lets predict if his/her claim is truth or bluff. Our task therefore being to predict the salary of someone who is at level 6.5 (mid way between regional manager and partner). The dataset received from the new hire's company has been plotted on a scatter graph below.
-
-<img src = 'Screen1.png' width='700'>
-
 In this analysis, we are choosing the Gaussian RBF Kernel (Radial Basis Function) and regularisation as due to the training sets with noise, the reguliser will prevent wild fluctuations between data points by smoothing out the prior. Any points away from the SVR curve will be treated as an outlier (as illustrated by the salary of the CEO in our dataset).
 
 The diagram below shows the SVR being applied to the dataset, along with a higher resolution plot (step size 0.01) for a smoother curve. 
 
-<img src = 'Screen3.png' width='700'>
+<img src = 'Screen6.png' width='700'>
 
 The predicted salary for someone at level 6.5 has been predicted to be just over £170,000, being in support of the new hire's claim. We therefore state that the new hire was telling us the truth.
