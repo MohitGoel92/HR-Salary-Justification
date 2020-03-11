@@ -92,9 +92,45 @@ The diagram below shows the Decision Tree Regressor model being applied to the d
 
 <img src = 'Screen11.png' width='700'>
 
-As the Decision Tree Regressor is not a continuous regression model, we must visualise the model using a higher resolution (step = 0.01).The diagram below shows the Decision Tree Regressor being applied to the dataset, along with a higher resolution plot (step size 0.01).
+As the Decision Tree Regressor is not a continuous regression model, we must visualise the model using a higher resolution. The diagram below shows the Decision Tree Regressor being applied to the dataset, along with a higher resolution plot (step size 0.01).
 
 <img src = 'Screen12.png' width='700'>
 
 The expected salary for someone at level 6.5 has been predicted to be £150,000. This is £10,000 under the new hire's claimed previous salary. Therefore, if we base our decision solely on the Decision Tree Regression model, we do not accept the new hire's claim and state that the new hire was bluffing. However, as the dataset is small and Decision Tree Regression yield poor results on small datasets, the validity of the result/decision is questionable.
 
+## Random-Forest-Regression
+
+The Random Forest model takes a team of Decision Trees, therefore, multiple trees coming together to make a forest. The ultimate prediction of the Random Forest itself is the average of the different predictions of all the different trees in the forest.
+
+**Ensemble Learning:** When you take the same algorithm multiple times and make it more powerful than the original.
+
+- **Step 1:** Pick at random K data points from the training set
+- **Step 2:** Build the Decision Tree associated to these K data points
+- **Step 3:** Choose the number of N trees you want to build and repeat the above two steps
+- **Step 4:** For a new data point, make each one of your N trees predict the value of y for the data point in question and assign the new data point the average across all the predicted y-values. It is common practice to select a large number of trees, for instance, N=300 (300 trees).
+
+As we're getting a high number of predictions for the y-value and then taking the average (predicting based on a forest of trees and not one tree), this improves the accuracy of our predictions as we're taking the average of many predictions. If we just take one tree, it may just be an "okay" or "not great" tree but as we're taking the average, it's less likely to arrive at a bad prediction. Ensemble algorithms are more stable due to any changes in the data that may impact a tree will unlikely impact a forest of trees.
+
+**Pros of Random Forest Regression:**
+
+- Powerful and accurate
+- Good performance on linear and non-linear problems
+
+**Cons of Random Forest Regression:**
+
+- No interpretability
+- Overfitting can easily occur
+- Need to choose the number of trees
+
+The diagram below shows the Random Forest Regressor model being applied to the dataset.
+
+<img src = 'Screen14.png' width='700'>
+
+As the Random Forest Regressor is not a continuous regression model, we must visualise the model using a higher resolution. The diagram below shows the Random Forest Regressor being applied to the dataset, along with a higher resolution plot (step size 0.01).
+
+**Note:** 
+As the number of trees N (n_estimators) increases, the number of steps do not increase as the averages converge to a similar number.
+
+<img src = 'Screen14.png' width='700'>
+
+The expected salary for someone at level 6.5 has been predicted to be £160,333. This is in exact agreement with the new hire's claimed previous salary. We therefore state that the new hire was tell us the truth.
