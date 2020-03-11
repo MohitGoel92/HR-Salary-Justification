@@ -131,6 +131,6 @@ As the Random Forest Regressor is not a continuous regression model, we must vis
 **Note:** 
 As the number of trees N (n_estimators) increases, the number of steps do not increase as the averages converge to a similar number.
 
-<img src = 'Screen14.png' width='700'>
+<img src = 'Screen15.png' width='700'>
 
 The expected salary for someone at level 6.5 has been predicted to be £160,333. This is in exact agreement with the new hire's claimed previous salary. We therefore state that the new hire was tell us the truth.
